@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="900.0" minWidth="1000.0" prefHeight="775.0" prefWidth="1200.0" style="-fx-background-color: #E6BA95;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pressing.pressingplus.InfoController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: green;">
+         <children>
+            <Button fx:id="btn_retour" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: E4E9BE;" text="&lt;" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+        </HBox>
+        <HBox fx:id="container" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="566.0" prefWidth="600.0" spacing="20.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-width: 3; -fx-border-radius: 5;">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="CLIENT">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </Label>
+                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0">
+                            <children>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: green;" text="Nom : " textFill="#29a829">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="nom_retrait" layoutX="224.0" layoutY="32.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                    <cursor>
+                                        <Cursor fx:constant="SW_RESIZE" />
+                                    </cursor>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: green;" text="Prenom : ">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="prenom_retrait" layoutX="194.0" layoutY="32.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: green;" text="Tel : ">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="tel_retrait" layoutX="241.0" layoutY="32.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-radius: 5; -fx-border-width: 3;">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="VETEMENTS">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-text-fill: green;" text="Type lavage : " />
+                        <Label fx:id="type_lavage" />
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="184.0" prefViewportHeight="434.0" prefViewportWidth="282.0" prefWidth="291.0">
+                     <content>
+                        <VBox alignment="CENTER" prefWidth="262.0" style="-fx-background-color: white;">
+                           <children>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Pantalon jeans" />
+                                    <TextField editable="false" text="500" />
+                                    <TextField fx:id="nbr_pant_jeans" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Pantalon tissu" />
+                                    <TextField editable="false" text="300" />
+                                    <TextField fx:id="nbr_pant_tissu" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Autre pantalon" />
+                                    <TextField editable="false" text="250" />
+                                    <TextField fx:id="nbr_pant_autre" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Chemise" />
+                                    <TextField editable="false" text="200" />
+                                    <TextField fx:id="nbr_chemise" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Veste" />
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="177.0" text="1000" />
+                                    <TextField fx:id="nbr_veste" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Chaussure" />
+                                    <TextField editable="false" text="500" />
+                                    <TextField fx:id="nbr_chaussure" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0">
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Tee-shirt" />
+                                    <TextField editable="false" text="150" />
+                                    <TextField fx:id="nbr_tee_shirt" editable="false" text="0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label style="-fx-text-fill: green;" text="Divers : ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="divers">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label style="-fx-text-fill: green;" text="Montant total : ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="montant">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-radius: 5; -fx-border-width: 3;">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="DATE">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: green;" text="Date depot : ">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="dateDepot_retrait" layoutX="159.0" layoutY="48.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: green;" text="Date retrait : ">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                              <Label fx:id="dateRetrait_retrait" layoutX="155.0" layoutY="48.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets top="100.0" />
+            </VBox.margin>
+        </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnregler_info" mnemonicParsing="false" onAction="#regler" style="-fx-background-color: #E4E9BE;" text="REGLER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAnnuler_info" mnemonicParsing="false" onAction="#annuler" style="-fx-background-color: #E4E9BE;" text="ANNULER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</VBox>

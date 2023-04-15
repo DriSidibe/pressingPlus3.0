@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" minHeight="900.0" minWidth="1000.0" prefHeight="775.0" prefWidth="1200.0" style="-fx-background-color: #E6BA95;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pressing.pressingplus.ConnexionController">
+    <padding>
+        <Insets left="10.0" right="10.0" />
+    </padding>
+    <children>
+        <HBox>
+            <children>
+                <VBox prefHeight="432.0" prefWidth="505.0">
+                    <children>
+                        <ImageView fitHeight="526.0" fitWidth="505.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/logo4_14_1258534.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="505.0" prefWidth="631.0" style="-fx-background-color: #E4E9BE;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label style="-fx-text-fill: green;" text="CONNECTEZ VOUS A VOTRE PRESSING">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="identifiant" alignment="CENTER" prefHeight="25.0" prefWidth="250.0" promptText="identifiant" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <PasswordField fx:id="mot_de_passe" alignment="CENTER" prefHeight="25.0" prefWidth="250.0" promptText="mot de passe" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" />
+                              <Button onAction="#connexion" fx:id="btn_connexion" mnemonicParsing="false" style="-fx-background-color: green; -fx-text-fill: white;" text="Se connecter" />
+                              <Button fx:id="btn_creer_compte" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #E4E9BE; -fx-text-fill: blue;" text="creer un compte" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <Button fx:id="btn_oublie" layoutX="274.0" layoutY="145.0" mnemonicParsing="false" style="-fx-background-color: #E4E9BE; -fx-text-fill: blue;" text="mot de passe oublié" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children></VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

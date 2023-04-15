@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="900.0" minWidth="1000.0" prefHeight="775.0" prefWidth="1200.0" style="-fx-background-color: #E6BA95;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pressing.pressingplus.DepotController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <GridPane alignment="CENTER" style="-fx-border-color: green;" HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/logo4_14_125853.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="btn_caisse" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: E4E9BE;" text="CAISSE">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_depot" disable="true" mnemonicParsing="false" style="-fx-background-color: E4E9BE;" text="DEPOT">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_retrait" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: E4E9BE;" text="RETRAIT">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_encour" layoutX="978.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: E4E9BE;" text="EN COURS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_historie" layoutX="512.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: E4E9BE;" text="HISTORIE">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ImageView fx:id="btn_deconnexion" onMouseClicked="#deconnexion" fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/connexion.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="566.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-width: 3; -fx-border-radius: 5;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="CLIENT">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Nom : " textFill="#29a829">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nom_depot" onKeyTyped="#verify" onMouseEntered="#depotBackgroundColorChanger" onMouseExited="#depotBackgroundColorChanger2" prefHeight="62.0" prefWidth="171.0" style="-fx-border-color: green;">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></TextField>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="SW_RESIZE" />
+                           </cursor>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Prenom : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="prenom_depot" onKeyTyped="#verify" onMouseEntered="#depotBackgroundColorChanger" onMouseExited="#depotBackgroundColorChanger2" prefHeight="62.0" prefWidth="174.0" style="-fx-border-color: green;">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Tel : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tel_depot" onKeyTyped="#verify" onMouseClicked="#cursorAtTheEnd" onMouseEntered="#depotBackgroundColorChanger" onMouseExited="#depotBackgroundColorChanger2" prefHeight="58.0" prefWidth="171.0" style="-fx-border-color: green;">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-radius: 5; -fx-border-width: 3;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="VETEMENTS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="341.0" prefWidth="291.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Type de lavage :" />
+                              <ComboBox fx:id="type_lavage" onAction="#changePrices" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: E4E9BE;" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <ScrollPane prefHeight="265.0" prefViewportHeight="434.0" prefViewportWidth="282.0" prefWidth="281.0">
+                           <content>
+                              <VBox fx:id="items_container" alignment="CENTER" prefHeight="200.0" prefWidth="271.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <HBox prefHeight="25.0" prefWidth="514.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="159.0" text="Pantalon jeans" />
+                                          <TextField fx:id="prix_pantalon_jeans" editable="false" prefHeight="25.0" prefWidth="69.0" text="500" />
+                                          <TextField fx:id="nbr_pant_jeans" editable="false" prefHeight="25.0" prefWidth="58.0" text="0" />
+                                          <Button fx:id="btn_pant_jeans_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_pant_jeans_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="48.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Pantalon tissu" />
+                                          <TextField fx:id="prix_pantalon_tissu" editable="false" text="300" />
+                                          <TextField fx:id="nbr_pant_tissu" editable="false" text="0" />
+                                          <Button fx:id="btn_pant_tissu_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_pant_tissu_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="129.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Autre pantalon" />
+                                          <TextField fx:id="prix_autre_pantalon" editable="false" text="250" />
+                                          <TextField fx:id="nbr_pant_autre" editable="false" text="0" />
+                                          <Button fx:id="btn_pant_autre_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_pant_autre_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="129.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Chemise" />
+                                          <TextField fx:id="prix_chemise" editable="false" text="200" />
+                                          <TextField fx:id="nbr_chemise" editable="false" text="0" />
+                                          <Button fx:id="btn_chemise_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_chemise_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="131.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="veste_cnt" prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Veste" />
+                                          <TextField fx:id="prix_veste" editable="false" prefHeight="25.0" prefWidth="149.0" text="1000" />
+                                          <TextField fx:id="nbr_veste" editable="false" text="0" />
+                                          <Button fx:id="btn_veste_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_veste_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="130.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="chaussure_cnt" prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Chaussure" />
+                                          <TextField fx:id="prix_chaussure" editable="false" text="500" />
+                                          <TextField fx:id="nbr_chaussure" editable="false" text="0" />
+                                          <Button fx:id="btn_chaussure_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_chaussure_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="129.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Tee-shirt" />
+                                          <TextField fx:id="prix_tee_shirt" editable="false" text="150" />
+                                          <TextField fx:id="nbr_tee_shirt" editable="false" text="0" />
+                                          <Button fx:id="btn_tee_shirt_moin" mnemonicParsing="false" onAction="#supprime" text="-" />
+                                          <Button fx:id="btn_tee_shirt_plus" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="130.0" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefWidth="200.0">
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="242.0" text="Divers" />
+                                          <TextField fx:id="divers_depot" onKeyTyped="#diversSelected" text="0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Montant : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="radioMontant" style="-fx-text-fill: green;" text="0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="307.0" spacing="10.0" style="-fx-border-color: green; -fx-border-radius: 5; -fx-border-width: 3;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="308.0" style="-fx-background-color: #E4E9BE; -fx-text-fill: green; -fx-font-weight: bolder;" text="DATE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-text-fill: green;" text="Date retrait : ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dateRetrait_depot" editable="false" prefHeight="95.0" prefWidth="161.0" style="-fx-border-color: green;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="100.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="btnEnregistrer_depot" mnemonicParsing="false" onAction="#enregistrer" style="-fx-background-color: #E4E9BE;" text="ENREGISTRER">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" />
+   </padding>
+</VBox>
